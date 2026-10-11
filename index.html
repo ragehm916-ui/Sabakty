@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="سباكتي لخدمات السباكة والصيانة وإصلاح التسريبات وتركيب الأدوات الصحية.">
+<title>سباكتي | خدمات السباكة والصيانة</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#06294d;--deep:#031c36;--blue:#08a9ed;--green:#08b65c;--light:#edf7ff}
+html{scroll-behavior:smooth}
+body{font-family:Tahoma,Arial,sans-serif;color:var(--navy);background:#fff;line-height:1.8}
+a{text-decoration:none}
+header{background:var(--navy);color:white;padding:12px 6%;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:9px;color:white;flex-shrink:0}
+.brand svg{width:58px;height:58px}
+.brand-name{font-size:27px;font-weight:bold;line-height:1.3}
+.brand-tag{display:block;color:var(--blue);font-size:11px;font-weight:normal}
+nav{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+nav a{color:white;font-size:14px}
+nav a:hover{color:var(--blue)}
+.whatsapp{display:inline-block;background:var(--green);color:white;border-radius:30px;padding:12px 22px;font-weight:bold;text-align:center;transition:.2s}
+.whatsapp:hover{background:#07964d;transform:translateY(-2px)}
+.hero{min-height:480px;display:flex;align-items:center;padding:55px 7%;color:white;background:linear-gradient(90deg,rgba(3,28,54,.97) 0%,rgba(3,39,72,.85) 43%,rgba(3,28,54,.15) 100%),url("https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&fit=crop&w=1800&q=85") center/cover no-repeat}
+.hero-content{max-width:540px}
+.eyebrow{color:#d6efff;font-size:15px;margin-bottom:8px}
+.hero h1{font-size:clamp(36px,5vw,58px);line-height:1.35;margin-bottom:6px}
+.hero h1 span{color:var(--blue)}
+.hero p{font-size:17px;color:#e4f2ff;margin:15px 0 25px}
+.hero-buttons{display:flex;gap:12px;flex-wrap:wrap}
+.outline-btn{display:inline-block;color:white;border:1px solid white;border-radius:30px;padding:11px 22px}
+.outline-btn:hover{background:white;color:var(--navy)}
+section{scroll-margin-top:20px}
+.services-section{padding:42px 7% 48px;background:#f6f9fd}
+.section-heading{text-align:center;margin-bottom:28px}
+.section-heading h2{font-size:32px;line-height:1.5}
+.section-heading h2:after{content:"";display:block;width:48px;height:4px;border-radius:5px;background:var(--blue);margin:8px auto}
+.section-heading p{color:#6b7e93;font-size:14px}
+.services-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.service-card{background:white;border:1px solid #e2eaf2;border-radius:12px;overflow:hidden;box-shadow:0 8px 22px rgba(6,41,77,.07);transition:transform .25s}
+.service-card:hover{transform:translateY(-5px)}
+.service-card img{width:100%;height:190px;object-fit:cover;display:block}
+.service-content{padding:18px 18px 23px;text-align:center}
+.service-icon{width:48px;height:48px;display:flex;justify-content:center;align-items:center;border-radius:50%;background:var(--blue);color:white;font-size:23px;margin:-43px auto 10px;position:relative;border:3px solid white}
+.service-content h3{font-size:19px;margin-bottom:6px}
+.service-content p{color:#64768b;font-size:14px}
+.about-section{display:grid;grid-template-columns:.8fr 1.2fr;align-items:center;gap:40px;background:var(--light);padding:45px 7%}
+.about-image{width:100%;height:280px;object-fit:cover;border-radius:12px}
+.about-text h2{font-size:31px;margin-bottom:12px}
+.about-text h2:after{content:"";display:block;width:45px;height:4px;background:var(--blue);margin-top:8px}
+.about-text p{color:#516780;font-size:15px;margin-bottom:15px}
+.features{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:22px}
+.feature{display:flex;align-items:center;gap:12px;font-weight:bold;font-size:14px}
+.feature-icon{background:#078ed0;color:white;min-width:45px;height:45px;border-radius:50%;display:grid;place-items:center;font-size:21px}
+.feature small{display:block;color:#71859a;font-weight:normal;font-size:12px}
+.contact-strip{background:var(--navy);color:white;padding:26px 7%;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.contact-strip h2{font-size:25px}
+.contact-strip p{color:#d9e9f8;font-size:14px}
+footer{background:var(--deep);color:white;padding:22px 7%;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer .brand svg{width:45px;height:45px}
+footer .brand-name{font-size:22px}
+footer p{color:#c6d8e9;font-size:12px}
+.socials{display:flex;gap:18px}
+.socials a{color:var(--blue);font-weight:bold}
+@media(max-width:800px){header{justify-content:center}nav{justify-content:center;gap:14px}.header-whatsapp{display:none}.hero{min-height:450px;background-position:center;padding:45px 6%}.hero-content{max-width:100%}.services-grid{grid-template-columns:1fr}.service-card img{height:220px}.about-section{grid-template-columns:1fr;gap:25px}.about-image{height:230px}.contact-strip,footer{justify-content:center;text-align:center}}
+@media(max-width:420px){.brand-name{font-size:23px}.brand svg{width:47px;height:47px}nav{gap:11px}nav a{font-size:12px}.hero h1{font-size:35px}.hero p{font-size:15px}.features{grid-template-columns:1fr}.section-heading h2{font-size:27px}}
+</style>
+</head>
+<body>
+<header>
+<a class="brand" href="#home" aria-label="سباكتي - الرئيسية">
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="شعار سباكتي">
+<path d="M50 5C38 25 15 46 15 66a35 35 0 0 0 70 0C85 46 62 25 50 5Z" fill="#08a9ed"/>
+<path d="M27 54 50 33 73 54V78H27Z" fill="#06294d" stroke="white" stroke-width="4" stroke-linejoin="round"/>
+<path d="M43 78V62a7 7 0 0 1 14 0v16" fill="none" stroke="#08a9ed" stroke-width="5"/>
+<path d="M25 46 50 23 75 46" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<span><span class="brand-name">سباكتي</span><span class="brand-tag">حلول السباكة المتكاملة</span></span>
+</a>
+<nav><a href="#home">الرئيسية</a><a href="#services">خدماتنا</a><a href="#about">من نحن</a><a href="#contact">تواصل معنا</a></nav>
+<a class="whatsapp header-whatsapp" href="https://wa.me/201000000000" target="_blank" rel="noopener">◉ اطلب خدمة واتساب</a>
+</header>
+<main>
+<section class="hero" id="home"><div class="hero-content">
+<div class="eyebrow">خدمات السباكة والصيانة</div>
+<h1>حلول السباكة<br><span>في إيد أمينة</span></h1>
+<p>من إصلاح التسريبات لتركيب الأدوات الصحية، نهتم بتفاصيل شغلك ونساعدك تختار الحل المناسب.</p>
+<div class="hero-buttons"><a class="whatsapp" href="https://wa.me/201000000000" target="_blank" rel="noopener">◉ اطلب خدمة واتساب</a><a class="outline-btn" href="#services">اكتشف خدماتنا ←</a></div>
+</div></section>
+<section class="services-section" id="services">
+<div class="section-heading"><h2>خدماتنا</h2><p>نقدم لك مجموعة متكاملة من خدمات السباكة والصيانة</p></div>
+<div class="services-grid">
+<article class="service-card"><img src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&fit=crop&w=800&q=85" alt="أعمال إصلاح السباكة" loading="lazy"><div class="service-content"><div class="service-icon">🔧</div><h3>إصلاح التسريبات</h3><p>فحص أماكن التسريب وإصلاح مشاكل المياه والمواسير.</p></div></article>
+<article class="service-card"><img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=800&q=85" alt="تركيب الأدوات الصحية" loading="lazy"><div class="service-content"><div class="service-icon">🚰</div><h3>تركيب الأدوات الصحية</h3><p>تركيب وصيانة الحنفيات والأحواض وأدوات الحمام.</p></div></article>
+<article class="service-card"><img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=85" alt="أعمال الصيانة" loading="lazy"><div class="service-content"><div class="service-icon">🛠</div><h3>صيانة المواسير</h3><p>صيانة شبكات المياه ومعالجة مشكلات المواسير.</p></div></article>
+</div></section>
+<section class="about-section" id="about">
+<img class="about-image" src="https://images.unsplash.com/photo-1564540583246-934409427776?auto=format&fit=crop&w=1000&q=85" alt="حنفية مياه في حمام" loading="lazy">
+<div class="about-text"><h2>من نحن؟</h2><p>سباكتي لخدمات السباكة والصيانة. هدفنا تقديم خدمات احترافية تلبي احتياجات عملائنا، مع الاهتمام بجودة التنفيذ والوضوح في التعامل.</p><p>نسعى لتقديم خدمة منظمة وحلول مناسبة لكل مشكلة.</p>
+<div class="features">
+<div class="feature"><span class="feature-icon">✓</span><span>جودة في الأداء<small>اهتمام بالتفاصيل</small></span></div>
+<div class="feature"><span class="feature-icon">◷</span><span>الالتزام بالمواعيد<small>تنسيق مسبق للخدمة</small></span></div>
+<div class="feature"><span class="feature-icon">♧</span><span>خدمة مميزة<small>اهتمام بالعميل</small></span></div>
+<div class="feature"><span class="feature-icon">◇</span><span>تعامل واضح<small>شرح الخدمة قبل التنفيذ</small></span></div>
+</div></div></section>
+<section class="contact-strip" id="contact"><div><h2>محتاج سباك؟</h2><p>تواصل معنا للاستفسار عن الخدمة المناسبة ليك.</p></div><a class="whatsapp" href="https://wa.me/201000000000" target="_blank" rel="noopener">◉ راسلنا على واتساب</a></section>
+</main>
+<footer>
+<a class="brand" href="#home"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50 5C38 25 15 46 15 66a35 35 0 0 0 70 0C85 46 62 25 50 5Z" fill="#08a9ed"/><path d="M27 54 50 33 73 54V78H27Z" fill="#06294d" stroke="white" stroke-width="4" stroke-linejoin="round"/><path d="M43 78V62a7 7 0 0 1 14 0v16" fill="none" stroke="#08a9ed" stroke-width="5"/><path d="M25 46 50 23 75 46" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg><span><span class="brand-name">سباكتي</span><span class="brand-tag">خدمات السباكة والصيانة</span></span></a>
+<p>© 2026 سباكتي - جميع الحقوق محفوظة</p><div class="socials"><a href="#contact">تواصل معنا</a><a href="#home">للأعلى ↑</a></div>
+</footer>
+</body>
+</html>
